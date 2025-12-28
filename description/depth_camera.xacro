@@ -16,7 +16,6 @@
         </visual>
     </link>
     
-    <!-- Optical Link (uses the visual/image coordinate system: x right, y down, z forward) -->
     <joint name="camera_optical_joint" type="fixed">
         <parent link="camera_link"/>
         <child link="camera_link_optical"/>

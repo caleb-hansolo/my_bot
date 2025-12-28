@@ -23,13 +23,11 @@
         <color rgba="1 0 0 1"/>
     </material>
 
-    <!-- BASE LINK -->
 
     <link name="base_link">
 
     </link>
 
-    <!-- CHASSIS LINK -->
 
     <joint name="chassis_joint" type="fixed">
         <parent link="base_link"/>
@@ -60,12 +58,10 @@
         <material>Gazebo/White</material>
     </gazebo>
 
-    <!-- LEFT WHEEL LINK -->
 
     <joint name="left_wheel_joint" type="continuous">
         <parent link="base_link"/>
         <child link="left_wheel"/>
-        <!-- roll pitch yaw - rotate the wheel -90 deg about the x axis, since default cylinder faces up in the z direction -->
         <origin xyz="0 0.175 0" rpy="-${pi/2} 0 0"/>
         <axis xyz="0 0 1"/>
     </joint>
@@ -91,12 +87,10 @@
         <material>Gazebo/Blue</material>
     </gazebo>
 
-    <!-- RIGHT WHEEL LINK -->
 
     <joint name="right_wheel_joint" type="continuous">
         <parent link="base_link"/>
         <child link="right_wheel"/>
-        <!-- roll pitch yaw - rotate the wheel -90 deg about the x axis, since default cylinder faces up in the z direction -->
         <origin xyz="0 -0.175 0" rpy="${pi/2} 0 0"/>
         <axis xyz="0 0 -1"/>
     </joint>
@@ -122,7 +116,6 @@
         <material>Gazebo/Blue</material>
     </gazebo>
 
-    <!-- CASTER WHEEL LINK -->
 
     <joint name="caster_wheel_joint" type="fixed">
         <parent link="chassis"/>
