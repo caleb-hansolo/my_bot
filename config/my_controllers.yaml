@@ -1,6 +1,7 @@
 controller_manager:
   ros__parameters:
     update_rate: 30
+    # only need to set use_sim_time at the top level - it will propagate to all controllers
     use_sim_time: true
 
     diff_cont:
